@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FirstRails</title>
+    <title>Books App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,16 +14,20 @@
   <% if user_signed_in?%>
       <p>こんにちは, <%= link_to current_user.name, users_show_path %></p>
 <%= link_to "Log Out", destroy_user_session_path, method: :delete%>
+<br>
+<%= link_to "Edit Profile", edit_user_registration_path%>
+<br>
+<%= "------------------------------------------------------------------"%>
+<br><br>
+<%= link_to "本一覧を見る", books_path %>
+
 <%else%>
       <%= link_to "ホーム", root_path%>
       <%= link_to "サインイン", new_user_session_path %>
       <%= link_to "ユーザ登録", new_user_registration_path %>
       <br>
-      <%="------------------------------------------------------------------------------------------"%>
 <%end%>
-<h1>HomePage</h1>
 
-<%= link_to "本一覧を見る", books_path %>
     <%= yield %>
   </body>
 </html>
