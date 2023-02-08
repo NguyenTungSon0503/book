@@ -71,3 +71,6 @@ group :test do
   gem "webdrivers"
 end
 gem 'devise'
+gem "bootstrap", "~> 5.2"
+
+gem "cssbundling-rails", "~> 1.1"
