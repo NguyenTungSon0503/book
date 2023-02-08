@@ -12,7 +12,7 @@
 
   <body>
   <% if user_signed_in?%>
-<p>こんにちわ, <%= link_to current_user.name  , user_show_path %> </p>
+<%# <p>こんにちわ, <%= link_to current_user.name  , user_show_path %> </p>
 <%= link_to "Log Out", destroy_user_session_path, method: :delete%>
 <%else%>
       <%= link_to "ホーム", root_path%>
